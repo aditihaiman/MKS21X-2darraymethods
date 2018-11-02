@@ -14,9 +14,8 @@ public class ArrayMethods{
    }
 
 
-
+//returns the sum of the elements in Column x of ary (careful with rows of different lengths!).
    public static int columnSum(int[][] ary, int x){}
-    //returns the sum of the elements in Column x of ary (careful with rows of different lengths!).
 
    /*
    *PART 2 - use prior methods where appropriate
