@@ -5,8 +5,15 @@ public class ArrayMethods{
    /*
    *PART 1
    */
-   public static int rowSum(int[][] ary, int x){}
-    //returns the sum of the elements in Row x of ary.
+   public static int rowSum(int[][] ary, int x){  //returns the sum of the elements in Row x of ary.
+     int sum = 0;
+     for (int y = 0; y < ary[x].length; y++) {
+       sum += ary[x][y];
+     }
+     return sum;
+   }
+
+
 
    public static int columnSum(int[][] ary, int x){}
     //returns the sum of the elements in Column x of ary (careful with rows of different lengths!).
