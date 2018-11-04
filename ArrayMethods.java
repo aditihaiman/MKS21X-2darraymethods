@@ -40,7 +40,15 @@ public class ArrayMethods{
     //Index i of the return array contains the sum of elements in row i.
 
     public static int[] allColSums(int[][] ary){
-      
+      int len = 0;
+      for (int x = 0; x < ary.length; x++){
+        if (ary[x].length > len) len = ary[x].length;
+      }
+      int[] sum = new int[len];
+      for (int x = 0; x < sum.length; x++) {
+        sum[x] = columnSum(ary, x);
+      }
+      return sum;
     }
     //Returns an array with the column sum of each column of ary.
     //When a row is not long enough to reach the column count it as a zero. (NO indexOutOfBounds should ever occur)
@@ -51,7 +59,9 @@ public class ArrayMethods{
    /*
    *PART 3 - use prior methods where appropriate
    */
-   public static boolean isRowMagic(int[][] ary){}
+   public static boolean isRowMagic(int[][] ary){
+     
+   }
      //checks if the array is row-magic (this means that every row has the same row sum).
 
    public static boolean isColumnMagic(int[][] ary){}
