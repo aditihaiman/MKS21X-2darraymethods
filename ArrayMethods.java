@@ -15,16 +15,33 @@ public class ArrayMethods{
 
 
 //returns the sum of the elements in Column x of ary (careful with rows of different lengths!).
-   public static int columnSum(int[][] ary, int x){}
+   public static int columnSum(int[][] ary, int x){
+     int sum = 0;
+     for (int y = 0; y < ary.length; y++) {
+       if (x < ary[y].length) {
+         sum+=ary[y][x];
+       }
+     }
+     return sum;
+   }
 
    /*
    *PART 2 - use prior methods where appropriate
    */
-   public static int[] allRowSums(int[][] ary){}
+   public static int[] allRowSums(int[][] ary){
+     int[] sum = new int[ary.length];
+     for (int x = 0; x < ary.length; x++) {
+       sum[x] = rowSum(ary, x);
+     }
+
+     return sum;
+   }
     //returns an array of the row sums for each row of ary.
     //Index i of the return array contains the sum of elements in row i.
 
-    public static int[] allColSums(int[][] ary){}
+    public static int[] allColSums(int[][] ary){
+      
+    }
     //Returns an array with the column sum of each column of ary.
     //When a row is not long enough to reach the column count it as a zero. (NO indexOutOfBounds should ever occur)
     //Index i of the return array contains the sum of elements in column i, ignoring any rows that are too short.
