@@ -60,11 +60,21 @@ public class ArrayMethods{
    *PART 3 - use prior methods where appropriate
    */
    public static boolean isRowMagic(int[][] ary){
-     
+     int[] sums = allRowSums(ary);
+     for (int x = 0; x < sums.length - 1; x++) {
+       if (sums[x] != sums[x+1]) return false;
+     }
+     return true;
    }
      //checks if the array is row-magic (this means that every row has the same row sum).
 
-   public static boolean isColumnMagic(int[][] ary){}
+   public static boolean isColumnMagic(int[][] ary){
+     int[] sums = allColSums(ary);
+     for (int x = 0; x < sums.length - 1; x++) {
+       if (sums[x] != sums[x+1]) return false;
+     }
+     return true;
+   }
     //checks if the array is column-magic (this means that every column has the same column sum).
 
 }
