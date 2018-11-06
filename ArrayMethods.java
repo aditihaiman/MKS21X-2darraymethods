@@ -6,6 +6,7 @@ public class ArrayMethods{
    *PART 1
    */
    public static int rowSum(int[][] ary, int x){  //returns the sum of the elements in Row x of ary.
+     if (x >= ary.length) return 0;
      int sum = 0;
      for (int y = 0; y < ary[x].length; y++) {
        sum += ary[x][y];
